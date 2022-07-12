@@ -41,10 +41,11 @@ class FizzBuzzTest {
     @Test
     void fizzBuzzStringTestNullInput() {
 //        String noInputResponse = fizzBuzz.fizzBuzzString(null);
-        assertThrows(IllegalArgumentException.class, () -> {
+        Throwable t = assertThrows(IllegalArgumentException.class, () -> {
                 FizzBuzz fizzbuzz = new FizzBuzz();
                 fizzbuzz.fizzBuzzString(null);
         });
+        assertEquals("FizzBuzz String cannot be null", t.getMessage(), "Fizzbuzz cannot be null, throws exception");
     }
 
 }
