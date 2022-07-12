@@ -1,12 +1,18 @@
 public class FizzBuzz {
   public String fizzBuzzString(String str) {
+      if (str == null) {
+          throw new IllegalArgumentException("FizzBuzz String cannot be null");
+      }
 
-      if (str.startsWith("f") && str.endsWith("b")) return "FizzBuzz";
+      else {
 
-      else if (str.startsWith("f"))  return "Fizz";
+          if (str.startsWith("f") && str.endsWith("b")) return "FizzBuzz";
 
-      else if (str.endsWith("b")) return "Buzz";
+          else if (str.startsWith("f")) return "Fizz";
 
-      return str;
+          else if (str.endsWith("b")) return "Buzz";
+
+          return str;
+      }
   }
 }

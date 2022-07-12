@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Executable;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class FizzBuzzTest {
@@ -37,8 +39,12 @@ class FizzBuzzTest {
     }
 
     @Test
-    void fizzBuzzStringTestNoInput() {
-        String noInputResponse = fizzBuzz.fizzBuzzString("");
-        assertEquals("", noInputResponse , "Fizzbuzz Outputs Empty when no input");
+    void fizzBuzzStringTestNullInput() {
+//        String noInputResponse = fizzBuzz.fizzBuzzString(null);
+        assertThrows(IllegalArgumentException.class, () -> {
+                FizzBuzz fizzbuzz = new FizzBuzz();
+                fizzbuzz.fizzBuzzString(null);
+        });
     }
+
 }

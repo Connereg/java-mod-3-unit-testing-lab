@@ -7,6 +7,7 @@ public class Main {
         System.out.println(f.fizzBuzzString("funb"));
         System.out.println(f.fizzBuzzString("Cool"));
         System.out.println(f.fizzBuzzString(""));
+        System.out.println(f.fizzBuzzString(null));
 
 
         // Fizz
